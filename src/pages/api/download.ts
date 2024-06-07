@@ -5,6 +5,8 @@ import ytdl from 'ytdl-core';
 export default async function downloadHandler(req: NextApiRequest, res: NextApiResponse) {
     const { url } = req.body;
 
+    console.log("Received request")
+
     if (!url || typeof url !== 'string') {
         return res.status(400).json({ error: 'Invalid URL' });
     }

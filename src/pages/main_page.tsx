@@ -54,7 +54,7 @@ const MainPage: NextPage = () => {
         </Button>
       </div>
       {message && (
-        <div className="bg-gray-100 p-4 rounded-lg mt-4 w-full text-center">
+        <div className="bg-gray-700 p-4 rounded-lg mt-4 w-full text-center">
           {message}
         </div>
       )}
