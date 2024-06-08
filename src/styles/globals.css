@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -11,8 +13,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 3, 4, 15;
+    --background-end-rgb: 51, 22, 77;
   }
 }
 
@@ -30,4 +32,39 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.nav {
+  background-color: transparent;
+}
+
+.focus\:ring-gradient:focus {
+  animation: ring-gradient 0.5s ease-out;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(147, 9, 252, 0.5)
+}
+
+@keyframes ring-gradient {
+  0% {
+    box-shadow: 0 0 0 0 rgba(147, 9, 252, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(147, 9, 252, 0.5);
+  }
+}
+
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.press-effect {
+  animation: press 0.1s ease-in-out;
 }
