@@ -23,10 +23,11 @@ export default async function downloadHandler(req: NextApiRequest, res: NextApiR
                 console.error('Error downloading video: ', err);
             });
         const info = await ytdl.getInfo(url);
-        console.log(info.videoDetails.title);
-        res.status(200).json({ title: info.videoDetails.title });
+        const { title, description, thumbnails } = info.videoDetails;
+        const thumbnail = thumbnails[thumbnails.length - 1].url;
+        res.status(200).json({ title, description, thumbnail });
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Failed to get video information' });
+        res.status(500).json({ error: 'Failed to fetch video information' });
     }
 }
