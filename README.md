@@ -1,4 +1,4 @@
-# Video Fetcher Web App
+# Youtube Video Downloader
 
 ![App Screenshot](public/images/ytdl.png)
 
