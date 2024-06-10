@@ -1,6 +1,6 @@
 # Video Fetcher Web App
 
-![Screenshot of the web application](public/images/screenshot.png)
+![App Screenshot](public/images/ytdl.png)
 
 
 A web application built with Next.js and React to fetch and download videos from YouTube.
